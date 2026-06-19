@@ -1,0 +1,7 @@
+This project is a small Python program that generates an image by moving a set of particles across a canvas and drawing short line segments as they travel. The script uses the Pillow library to create a blank image, draw on it, and save the final output.
+
+The process is straightforward. The program first creates a 3000×3000 pixel canvas and an empty list to store particle dictionaries. Each particle is initialised with an (x, y) position, a movement bias, and a colour. The script then runs a fixed number of simulation steps. On each step, every particle updates its position based on its stored bias values. The program records the previous coordinates, moves the particle, and draws a line between the old and new positions using Pillow’s ImageDraw interface.
+
+The simulation repeats this movement–draw cycle for all particles across all steps. The result is a dense set of overlapping line segments that form a continuous trail pattern. The output image is written to output/particle-drift.png, and the directory is created if it does not already exist.
+
+The code is intended as a simple example of particle‑based generative graphics. It does not rely on external data sources, and all behaviour is defined within the script: particle creation, movement rules, drawing logic, and file output
